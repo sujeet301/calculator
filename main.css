@@ -1,0 +1,257 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+     .main{
+      font-family: Arial, sans-serif;
+      background: #843c3c;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 320px;
+      margin: 20px;
+      
+    }
+
+    
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* Buttons grid */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #eee;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    button.operator {
+      background-color: #f9a825;
+      color: white;
+    }
+    button.operator:hover {
+      background-color: #f57f17;
+    }
+    button.equal {
+      background-color: #4caf50;
+      color: white;
+      grid-column: span 2;
+    }
+    button.equal:hover {
+      background-color: #388e3c;
+    }
+    button.clear {
+      background-color: #e53935;
+      color: white;
+    }
+    button.clear:hover {
+      background-color: #b71c1c;
+    }
+
+    #display {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      text-align: right;
+      padding: 5px 10px;
+      margin-bottom: 15px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    /* SIP calculator form */
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input[type=number], select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #sipResult, #calorieResult {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+   
+    
+
+    /* Modal styles */
+    #choiceModal {
+      
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    #choiceModalContent {
+      margin: 20px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 320px;
+    }
+    #choiceModalContent h1 {
+      margin-bottom: 20px;
+    }
+    #choiceModalContent button {
+      width: 180px;
+      margin: 10px;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background-color: #2196f3;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    #choiceModalContent button:hover {
+      background-color: #0b7dda;
+    }
+
+    /* Back button style */
+    .back-button  {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      background: #2196f3 !important; 
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .back-button:hover  {
+      background-color: #0b7dda !important;
+    }
+
+
+    /* age-calculator */
+
+    .age-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+    }
+    .age-container h1 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+    .age-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #34495e;
+    }
+    .age-container input {
+      padding: 12px 15px;
+      width: 100%;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+    .age-container input:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+    .calcaulatebutton {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100%;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .calcaulatebutton:hover {
+      background-color: #388e3c;
+      transform: translateY(-2px);
+    }
+    .calcaulatebutton:active {
+      transform: translateY(0);
+    }
+    .age-result {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #2c3e50;
+      text-align: center;
+      /* min-height: 60px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .age-error {
+      color: #e74c3c;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    
+
+    /* salary-calculator */
+
+    .salary-result {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #396482;
+      text-align: center;
+    
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
