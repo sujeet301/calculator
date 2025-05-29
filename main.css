@@ -245,3 +245,76 @@ select {
   border-radius: 10px;
   margin-top: 20px;
 }
+/* Footer Styles */
+.custom-footer {
+  background-color: #0a1a3c;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-section input[type="email"]::placeholder {
+  color: #ddd;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section.links a {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-section.links a:hover {
+  color: #2ebf91;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff33;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
