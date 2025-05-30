@@ -1,361 +1,118 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* === Animation Enhancements === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Main Container */
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  background: linear-gradient(to right, #8360c3, #2ebf91);
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* General Container Style */
-.container {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 340px;
-  margin: 20px;
+.pop-in {
+  animation: popIn 0.5s ease-out forwards;
 }
 
-/* Headings */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-/* Buttons Grid */
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
+/* Buttons - Interactive Enhancements */
 button {
-  font-size: 18px;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: #ecf0f1;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
-}
-button:hover {
-  background-color: #dcdde1;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
 }
 
-button.operator {
-  background-color: #f39c12;
-  color: white;
-}
-button.operator:hover {
-  background-color: #e67e22;
+button:active {
+  transform: scale(0.95);
 }
 
-button.equal {
-  background-color: #27ae60;
-  color: white;
-  grid-column: span 2;
-}
-button.equal:hover {
-  background-color: #219150;
-}
-
-button.clear {
-  background-color: #e74c3c;
-  color: white;
-}
-button.clear:hover {
-  background-color: #c0392b;
+/* Input Focus Animation */
+input[type=number]:focus,
+select:focus {
+  border-color: #2ebf91;
+  box-shadow: 0 0 5px rgba(46, 191, 145, 0.6);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Display */
+/* Container Animation */
+.container,
+.age-container,
+#choiceModalContent {
+  animation: popIn 0.6s ease-out;
+}
+
+/* Display Enhancement */
 #display {
-  width: 100%;
-  height: 55px;
-  font-size: 26px;
-  text-align: right;
-  padding: 10px 15px;
-  margin-bottom: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: #fafafa;
+  background: #ffffffee;
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
 }
 
-/* Input & Select Fields */
-label {
-  display: block;
-  margin: 12px 0 6px;
-  font-weight: 600;
-  color: #34495e;
-}
-
-input[type=number],
-select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #bdc3c7;
-  background-color: #fdfefe;
-}
-
-/* Results */
+/* Result Box Enhancements */
 #sipResult,
 #calorieResult,
 .age-result,
 .salary-result {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  background: #f4f6f9;
-  padding: 15px;
-  border-radius: 10px;
-  color: #2d3436;
+  animation: fadeInUp 0.6s ease;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Modal Styles */
-#choiceModal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Button Glow Hover Effect */
+button:hover {
+  box-shadow: 0 0 10px rgba(46, 191, 145, 0.3);
 }
 
-#choiceModalContent {
-  margin: 20px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  width: 340px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-#choiceModalContent h1 {
-  margin-bottom: 20px;
-}
-
-#choiceModalContent button {
-  width: 200px;
-  margin: 10px;
-  font-size: 18px;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: #3498db;
-  color: white;
-  transition: 0.3s ease;
-}
-
-#choiceModalContent button:hover {
-  background-color: #2980b9;
-}
-
-/* Back Button */
+/* Back Button Shine */
 .back-button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 14px;
-  font-size: 18px;
-  border: none;
-  background: #2980b9;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.back-button:hover {
-  background-color: #1c639e;
-}
-
-/* Age Calculator */
-.age-container {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 350px;
-  margin: auto;
-}
-
-.age-container input {
-  padding: 12px;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.age-container input:focus {
-  border-color: #3498db;
-  outline: none;
-}
-
-/* Calculate Button */
-.calcaulatebutton {
-  margin-top: 20px;
-  padding: 14px;
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.calcaulatebutton:hover {
-  background-color: #27ae60;
-  transform: translateY(-2px);
-}
-.calcaulatebutton:active {
-  transform: translateY(0);
-}
-
-/* Error Message */
-.age-error {
-  color: #e74c3c;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-/* Salary Result Styling */
-.salary-result {
-  color: #2c3e50;
-  font-size: 18px;
-  background-color: #ecf0f1;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-/* Footer Styles */
-.custom-footer {
-  background: linear-gradient(135deg, #0a1a3c, #1f3b6d);
-  color: #ffffff;
-  padding: 50px 20px 30px;
-  margin-top: 60px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.2);
-  border-top: 5px solid #2ebf91;
-  border-radius: 12px 12px 0 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  gap: 30px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 240px;
-  padding: 10px;
-}
-
-.footer-section h2,
-.footer-section h3 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #2ebf91;
-  border-left: 5px solid #2ebf91;
-  padding-left: 10px;
-}
-
-.footer-section input[type="email"] {
-  padding: 12px 15px;
-  width: 100%;
-  max-width: 280px;
-  margin-bottom: 15px;
-  border: 1px solid #ffffff44;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s;
-}
-
-.footer-section input[type="email"]:focus {
-  border-color: #2ebf91;
-}
-
-.footer-section input[type="email"]::placeholder {
-  color: #ccc;
-}
-
-.footer-section p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.footer-section.links a {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
   position: relative;
-  padding-left: 20px;
+  overflow: hidden;
 }
-
-.footer-section.links a::before {
-  content: "➤";
+.back-button::after {
+  content: '';
   position: absolute;
-  left: 0;
-  color: #2ebf91;
-  font-size: 14px;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: skewX(-25deg);
+  transition: left 0.5s;
+}
+.back-button:hover::after {
+  left: 125%;
 }
 
+/* Footer Glow Link */
 .footer-section.links a:hover {
-  color: #2ebf91;
-  transform: translateX(5px);
+  text-shadow: 0 0 6px #2ebf91;
 }
 
-.footer-bottom {
-  border-top: 1px solid #ffffff33;
-  text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-  letter-spacing: 0.5px;
+/* Modal Animation */
+#choiceModalContent {
+  animation: fadeInUp 0.6s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
 }
 
-/* Responsive Improvements */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-section {
-    min-width: 100%;
-  }
-
-  .footer-section input[type="email"] {
-    max-width: 100%;
+/* Responsive Button Glow */
+@media (hover: hover) {
+  button:hover {
+    transform: translateY(-2px);
   }
 }
