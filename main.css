@@ -466,3 +466,13 @@ body::before {
     background-position: 0% 50%;
   }
 }
+.back-button {
+  position: relative;           /* Make sure it's not hidden behind other elements */
+  z-index: 9999;                /* Bring it to the front */
+  pointer-events: auto;         /* Allow clicks */
+  opacity: 1 !important;        /* Make sure it’s visible */
+  display: inline-block;        /* Ensure it’s displayed */
+  cursor: pointer;              /* Show pointer cursor */
+  transition: all 0.3s ease;    /* Smooth interaction */
+  animation: fadeInUp 0.5s ease-in-out; /* Optional animation */
+}
