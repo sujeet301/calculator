@@ -360,3 +360,38 @@ select {
   }
 }
 
+/* Hanging Box Effect */
+.hanging-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Rope */
+.hanging-box::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Swing Animation */
+@keyframes swing {
+  0% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  100% { transform: rotate(1deg); }
+}
+
+
