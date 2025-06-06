@@ -246,18 +246,6 @@ select {
   margin-top: 20px;
 }
 /* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
-}
 
 /* Footer Styles */
 .custom-footer {
