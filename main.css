@@ -245,6 +245,20 @@ select {
   border-radius: 10px;
   margin-top: 20px;
 }
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* Footer Styles */
 .custom-footer {
   background: linear-gradient(135deg, #0a1a3c, #1f3b6d);
@@ -342,6 +356,40 @@ select {
   color: #ccc;
   letter-spacing: 0.5px;
 }
+
+/* New paragraph styling inside footer */
+.footer-about {
+  max-width: 800px;
+  margin: 30px auto 0;
+  color: #a9d6c2; /* softer greenish tint */
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+
+  .footer-section input[type="email"] {
+    max-width: 100%;
+  }
+
+  .footer-about {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
 
 /* Responsive Improvements */
 @media (max-width: 768px) {
