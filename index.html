@@ -15,7 +15,7 @@
 <body>
     <!-- Navbar -->
 <nav class="navbar">
-  <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+
 
   
   
@@ -218,19 +218,5 @@
   </div>
 </footer>
 
-  const toggleBtn = document.getElementById('darkModeToggle');
-
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-
-  // Optional: Change button icon/text based on mode
-  if (document.body.classList.contains('dark-mode')) {
-    toggleBtn.textContent = '☀️';  // sun icon for light mode
-  } else {
-    toggleBtn.textContent = '🌙';  // moon icon for dark mode
-  }
-});
-
-  
 </body>
 </html>
